@@ -36,3 +36,6 @@ web-ext-artifacts/
 *.tmp
 *.bak
 ~$*
+
+# Distribution zips (attach to GitHub Releases, don't commit)
+*.zip
