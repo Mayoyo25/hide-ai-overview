@@ -1,0 +1,11 @@
+/*
+ * Hide Google AI Overview.
+ * #Odp5De is the verified AI Overview wrapper (does not contain ads).
+ * Other selectors are fallbacks.
+ */
+#Odp5De,
+#eKIzJc,
+div[jsname="ZLxsqf"],
+div[jsname="dEwkXc"] {
+  display: none !important;
+}
