@@ -1,11 +1,15 @@
 /*
  * Hide Google AI Overview.
- * #Odp5De is the verified AI Overview wrapper (does not contain ads).
- * Other selectors are fallbacks.
+ *
+ * Applied ONLY when <html> has class "hide-ai-overview-on".
+ * That class is set/removed by hide.js based on the stored enabled state.
+ * The rule is in the stylesheet at document_start so there is no
+ * flash-of-AI-Overview (FOAIO) before the class is applied.
  */
-#Odp5De,
-#eKIzJc,
-div[jsname="ZLxsqf"],
-div[jsname="dEwkXc"] {
+
+html.hide-ai-overview-on #Odp5De,
+html.hide-ai-overview-on #eKIzJc,
+html.hide-ai-overview-on div[jsname="ZLxsqf"],
+html.hide-ai-overview-on div[jsname="dEwkXc"] {
   display: none !important;
 }

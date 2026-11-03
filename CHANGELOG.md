@@ -8,6 +8,15 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [1.1.0] - 2026-11-03
 
+### Fixed
+- AI Overview flashed briefly before being hidden. `hide.css` is now
+  injected at `document_start` via a static content script, and visibility
+  is controlled by a class on `<html>`, eliminating the flash entirely.
+
+### Changed
+- `background.js` no longer uses `chrome.scripting` for CSS injection;
+  the toolbar toggle now just adds/removes a class via `sendMessage`.
+
 ### Added
 - Toolbar toggle button with ON/OFF badge.
 - Persistent on/off state via `chrome.storage.local`.

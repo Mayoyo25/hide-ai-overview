@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Hide AI Overview",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Hides Google's AI Overview from search results. Click the toolbar icon to toggle on/off.",
   "permissions": ["storage", "scripting"],
   "host_permissions": [
@@ -24,6 +24,31 @@
   "background": {
     "service_worker": "background.js"
   },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.google.com/search*",
+        "*://www.google.co.ke/search*",
+        "*://www.google.co.uk/search*",
+        "*://www.google.ca/search*",
+        "*://www.google.com.au/search*",
+        "*://www.google.de/search*",
+        "*://www.google.fr/search*",
+        "*://www.google.co.in/search*",
+        "*://www.google.es/search*",
+        "*://www.google.it/search*",
+        "*://www.google.nl/search*",
+        "*://www.google.co.za/search*",
+        "*://www.google.com.ng/search*",
+        "*://www.google.co.tz/search*",
+        "*://www.google.co.ug/search*"
+      ],
+      "css": ["hide.css"],
+      "js": ["hide.js"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
   "action": {
     "default_title": "Toggle Hide AI Overview",
     "default_icon": {
